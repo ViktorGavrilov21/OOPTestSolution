@@ -36,7 +36,7 @@
 //
 //	alex = st03;
 //
-//	Student list[]{ st01, st02, st03 };
+//	Student list[]{ st01, st02, st03, alex };
 //
 //	cout << findBestStudent(list).name << endl;
 //
