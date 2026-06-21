@@ -3,8 +3,9 @@
 #include <string>
 using namespace std;
 
+
 class Student {
-public:
+private:
 	string name;
 	int age;
 	//double mark;
@@ -12,7 +13,7 @@ public:
 	bool alive;
 	int* marks;
 	int count;
-
+public:
 	Student() {
 		cout << "Student default constructor\n";
 		name = "";
@@ -74,6 +75,14 @@ public:
 			delete[] marks;
 			count = 0;
 		}
+	}
+
+	string getName() {
+		return name;
+	}
+
+	void setName(string nm) {
+		name = nm;
 	}
 
 	string toString() {
