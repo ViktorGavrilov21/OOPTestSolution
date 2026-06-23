@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Menager.h" />
-    <ClInclude Include="Students.h" />
+    <ClInclude Include="Student.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main01.cpp" />
@@ -152,6 +152,8 @@
     <ClCompile Include="main07.cpp" />
     <ClCompile Include="main08.cpp" />
     <ClCompile Include="main09.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
