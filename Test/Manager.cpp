@@ -1,6 +1,10 @@
 #pragma once
 #include "Menager.h"
 
+Menager::~Menager() {
+	cout << "Menager default destructor\n";
+}
+
 
 double Menager::calculateAverageMark(Student* student) {
 	double s = 0;

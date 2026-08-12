@@ -5,6 +5,8 @@ Group::Group() {
 	count = 0;
 	name = "no name";
 }
+
+
 Group::Group(string nm, Student** ls, int c) {
 	name = nm;
 
@@ -17,34 +19,51 @@ Group::Group(string nm, Student** ls, int c) {
 		count = 0;
 	}
 }
+
+
 //Group::Group(const Group* group)
 Group::~Group() {
-	if (count > 0 && list != nullptr) {
+	cout << "Gruop default destructor\n";
+	/*if (count > 0 && list != nullptr) {
 		count = 0;
 		delete[] list;
-	}
+	}*/
 }
+
+
 string Group::getName() {
 	return name;
 }
+
+
 void Group::setName(string nm) {
 	name = nm;
 }
+
+
 int Group::getCount() {
 	return count;
 }
+
+
 Student* Group::getStudent(int index) {
 	if (list != nullptr && index >= 0 && index < count) {
 		return *(list + index);
 	}
 	return nullptr;
 }
+
+
 void Group::addStudent(Student) {
 
 }
+
+
 void Group::removeStudent(int index) {
 
 }
+
+
 string Group::toString() {
 	string s = "Group - " + name + ":";
 

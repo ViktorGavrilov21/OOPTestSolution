@@ -13,14 +13,19 @@ int main() {
 	Student* st04 = new Student("Alise", 15, 'f', true, marks04, 5);
 	Student* st05 = new Student("Peter", 14, 'm', true, marks05, 6);
 
-	Student** group = new Student * [5]{ st01, st02, st03, st04, st05 };
+	Student** list = new Student * [5]{ st01, st02, st03, st04, st05 };
+
+	Group* group = new Group("group", list, 5);
 
 	Menager* menager = new Menager();
 
-	cout << "Average mark ov student list is "
-		<< menager->calculateAverageMark(group, 5) << "\n";
+	cout << "\nAverage mark ov student list is "
+		<< menager->calculateAverageMark(group) << "\n\n";
 
-	delete[] group;
+	delete menager;
+	delete group;
+
+	delete[] list;
 
 	delete st01;
 	delete st02;
