@@ -13,11 +13,12 @@ public:
 	//Group(const Group* group);
 	~Group();
 
+	//нужно добавить функцию получения индекса студетна по имени
 	string getName();
 	void setName(string nm);
 	int getCount();
 	Student* getStudent(int index);
-	void addStudent(Student);
+	void addStudent(Student* Student);
 	void removeStudent(int index);
 	
 	string toString();
