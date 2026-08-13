@@ -1,4 +1,4 @@
-//#include "Students.h"
+//#include "Student.h"
 //
 //
 //int main() {
@@ -12,9 +12,13 @@
 //	cout << st01->toString() << endl;
 //	cout << st02->toString() << endl;
 //
+//	/////////////////////////////////////
 //	for (int i = 0; i < 5; i++) {
-//		*(st01->marks + i) = 10;
+//		*(st01->getMarks() + i) = 10;
 //	}
+//
+//	st01->setName("Artur");
+//	/////////////////////////////////////
 //
 //	cout << "After:\n";
 //	cout << st01->toString() << endl;

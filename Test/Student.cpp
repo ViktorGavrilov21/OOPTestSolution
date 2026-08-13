@@ -48,8 +48,15 @@ Student::Student(const Student* student) {
 	age = student->age;
 	alive = student->alive;
 	gender = student->gender;
-	marks = student->marks;
 	count = student->count;
+
+	if (student->count > 0 && student->marks != nullptr) {
+		marks = new int[student->count];
+
+		for (int i = 0; i < count; i++) {
+			marks[i] = student->marks[i];
+		}
+	}
 }
 
 Student::~Student() {
