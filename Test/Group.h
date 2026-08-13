@@ -13,7 +13,8 @@ public:
 	//Group(const Group* group);
 	~Group();
 
-	//нужно добавить функцию получения индекса студетна по имени
+	int getStudentIndexByName(string name, Group* group);
+	int getStudentIndexByStudent(Student* student, Group* group);
 	string getName();
 	void setName(string nm);
 	int getCount();

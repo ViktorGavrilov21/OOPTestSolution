@@ -30,8 +30,8 @@ int main() {
 	group->addStudent(new_student_2);
 
 	//надо чтобы индекс студента закидывался в функции лежащие ниже через функцию getStudentIndexByName
-	//group->removeStudent(new_student);
-	//group->removeStudent(new_student_2);
+	group->removeStudent(group->getStudentIndexByName("Viktor", group));
+	group->removeStudent(group->getStudentIndexByStudent(new_student_2, group));
 
 
 

@@ -31,6 +31,26 @@ Group::~Group() {
 }
 
 
+int Group::getStudentIndexByName(string name, Group* group) {
+	for (int i = 0; i < count; i++) {
+		if (group->getStudent(i)->getName() == name) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+
+int Group::getStudentIndexByStudent(Student* student, Group* group) {
+	for (int i = 0; i < count; i++) {
+		if (group->getStudent(i) == student) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+
 string Group::getName() {
 	return name;
 }
