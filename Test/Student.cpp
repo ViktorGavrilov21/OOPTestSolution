@@ -12,34 +12,34 @@ Student::Student() {
 	count = 0;
 }
 
-Student::Student(string nm, int ag) {
+Student::Student(string name, int age) {
 	cout << "Student constructor with arguments\n";
-	name = nm;
-	age = ag;
+	this->name = name;
+	this->age = age;
 	alive = false;
 	gender = '\0';
 	marks = NULL;
 	count = 0;
 }
 
-Student::Student(int ag, string nm) {
+Student::Student(int age, string name) {
 	cout << "Student constructor with arguments\n";
-	name = nm;
-	age = ag;
+	this->name = name;
+	this->age = age;
 	alive = false;
 	gender = '\0';
 	marks = NULL;
 	count = 0;
 }
 
-Student:: Student(string nm, int ag, char gndr, bool a, int* mrks, int cnt) {
+Student:: Student(string name, int age, char gender, bool alive, int* marks, int count) {
 	cout << "Student canonical constructor\n";
-	name = nm;
-	age = ag;
-	alive = a;
-	gender = gndr;
-	marks = mrks;
-	count = cnt;
+	this->name = name;
+	this->age = age;
+	this->alive = alive;
+	this->gender = gender;
+	this->marks = marks;
+	this->count = count;
 }
 
 Student::Student(const Student* student) {
@@ -72,17 +72,17 @@ string Student::getName() {
 	return name;
 }
 
-void Student::setName(string nm) {
-	name = nm;
+void Student::setName(string name) {
+	this->name = name;
 }
 
 int Student::getAge() {
 	return age;
 }
 
-void Student::setAge(int a) {
-	if (a > 0) {
-		age = a;
+void Student::setAge(int age) {
+	if (age > 0) {
+		this->age = age;
 	}
 }
 
@@ -90,9 +90,9 @@ char Student::getGender() {
 	return gender;
 }
 
-void Student::setGender(char g) {
-	if (g == 'm' || g == 'f') {
-		gender = g;
+void Student::setGender(char gender) {
+	if (gender == 'm' || gender == 'f') {
+		this->gender = gender;
 	}
 }
 
@@ -100,8 +100,8 @@ bool Student:: isAlive() {
 	return alive;
 }
 
-void Student::setAlive(bool a) {
-	alive = a;
+void Student::setAlive(bool alive) {
+	this->alive = alive;
 }
 
 int Student::getCountMark() {
@@ -112,13 +112,13 @@ int* Student::getMarks() {
 	return marks;
 }
 
-void Student::setMarks(int* m, int c) {
-	if (c > 0 && m != nullptr) {
+void Student::setMarks(int* marks, int count) {
+	if (count > 0 && marks != nullptr) {
 		if (marks != nullptr) {
-			delete[] marks;
+			delete[] this->marks;
 		}
-		marks = m;
-		count = c;
+		this->marks = marks;
+		this->count = count;
 	}
 }
 
