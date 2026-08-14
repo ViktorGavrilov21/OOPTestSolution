@@ -4,26 +4,26 @@
 using namespace std;
 
 
-class Student {
-private:
+class Human
+{
+protected:
 	string name;
 	int age;
 	char gender;
 	bool alive;
-	int* marks;
-	int count;
+
 public:
 	//default constructor
-	Student();
+	Human();
 	//constructor with argumrnts
-	Student(string name, int age);
-	Student(int age, string name);
+	Human(string name, int age);
+	Human(int age, string name);
 	//canonical constructor
-	Student(string name, int age, char gender, bool alive, int* marks, int count);
+	Human(string name, int age, char gender, bool alive);
 	//copy constructor
-	Student(const Student* student);
+	Human(const Human* human);
 	//default destructor
-	~Student();
+	~Human();
 	//getters and setters
 	string getName();
 	void setName(string name);
@@ -33,8 +33,6 @@ public:
 	void setGender(char gender);
 	bool isAlive();
 	void setAlive(bool alive);
-	int getCountMark();
-	int* getMarks();
-	void setMarks(int* marks, int count);
 	string toString();
 };
+

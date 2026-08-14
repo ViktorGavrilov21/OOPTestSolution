@@ -2,14 +2,8 @@
 #include "Student.h"
 
 
-Student::Student() {
+Student::Student() : Student("", 0, 'm', false, NULL, 0) {
 	cout << "Student default constructor\n";
-	name = "";
-	age = 0;
-	alive = false;
-	gender = '\0';
-	marks = NULL;
-	count = 0;
 }
 
 Student::Student(string name, int age) {
