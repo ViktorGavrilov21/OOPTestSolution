@@ -49,6 +49,7 @@ Student::Student(const Student* student) {
 	alive = student->alive;
 	gender = student->gender;
 	count = student->count;
+	marks = nullptr;
 
 	if (student->count > 0 && student->marks != nullptr) {
 		marks = new int[student->count];

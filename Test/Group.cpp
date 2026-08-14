@@ -7,6 +7,19 @@ Group::Group() {
 }
 
 
+Group::Group(const Group* group) {
+	name = group->name;
+	count = group->count;
+	list = new Student * [count];
+
+	if (count > 0 ) {
+		for (int i = 0; i < count; i++) {
+			list[i] = group->list[i];
+		}
+	}
+}
+
+
 Group::Group(string nm, Student** ls, int c) {
 	name = nm;
 
@@ -21,7 +34,6 @@ Group::Group(string nm, Student** ls, int c) {
 }
 
 
-//Group::Group(const Group* group)
 Group::~Group() {
 	cout << "Gruop default destructor\n";
 	if (count > 0 && list != nullptr) {

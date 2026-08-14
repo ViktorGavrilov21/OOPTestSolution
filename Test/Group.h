@@ -8,6 +8,7 @@ private:
 	int count;
 
 public:
+	Group(const Group* group);
 	Group();
 	Group(string nm, Student** ls, int c);
 	//Group(const Group* group);
