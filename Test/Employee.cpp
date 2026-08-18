@@ -3,6 +3,7 @@
 //default constructor
 Employee::Employee() {
 	cout << "Employee default constructor\n";
+	this->salary = 0.0;
 }
 
 
@@ -16,7 +17,7 @@ Employee::Employee(string name, int age, char gender, bool alive,
 //copy constructor
 Employee::Employee(const Employee* employee) : Human(employee){
 	cout << "Employee copy-constructor\n";
-	this->salary = salary;
+	this->salary = employee->salary;
 }
 
 
